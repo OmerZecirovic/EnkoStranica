@@ -1,0 +1,332 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Trebuchet MS, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  background-image: url('assets/images/Picture1.png');
+  background-size: 65% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgb(204, 196, 196);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Minimum height of the viewport height */
+}
+
+/* Navigation Styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  background-color: #fff;
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-item a:hover {
+  background-color: #555;
+}
+
+.content1 {
+  text-align: right;
+  margin: 20px;
+  font-size: 25px;
+}
+
+/* About Section Styles */
+.about-section1 {
+  font-size: 30px;
+  text-align: right;
+  margin-top: 60px;
+  padding: 20px 0;
+  color: black !important;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.button1 {
+  font-size: 30px !important;
+  margin-top: 20px !important;
+  
+}
+
+.social-media-section1 {
+  display: flex;
+  justify-content: bottom;
+  align-items: center;
+  height: 80px;
+  background-color: #000;
+  margin-top: 100px;
+}
+
+.social-media-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-media-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-media-links a:hover {
+  color: #ccc;
+}
+
+.footer {
+  color: #f4f4f4;
+  right: 100px;
+}
+
+/* Social Media Section Styles */
+.social-media-section2 {
+  display: flex;
+  justify-content: bottom;
+  align-items: center;
+  height: 80px;
+  background-color: #000;
+  margin-top: 100px;
+}
+
+.social-media-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-media-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-media-links a:hover {
+  color: #ccc;
+}
+
+.footer {
+  color: #f4f4f4;
+  right: 100px;
+}
+
+.social-media-section3 {
+  display: flex;
+  justify-content: bottom;
+  align-items: center;
+  height: 100px;
+  background-color: black;
+}
+
+.social-media-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-media-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-media-links a:hover {
+  color: #ccc;
+}
+
+.footer {
+  color: #f4f4f4;
+  right: 100px;
+}
+
+
+/* About Us Section Styles */
+.about-section2 {
+  font-size: 30px;
+  margin-top: 30px;
+  padding: 20px;
+  color: black !important;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+/* Workers Section Styles */
+.workers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.worker {
+  text-align: center;
+  margin: 40px;
+  margin-top: -20px;
+  width: 100px; /* Fixed width for all workers */
+  height: 100px; /* Fixed height for all workers */
+}
+
+.worker img {
+  width: 150%; /* Take up the full width of the .worker div */
+  height: 150%; /* Take up the full height of the .worker div */
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.worker p {
+  margin-top: 10px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.worker:hover img {
+  transform: scale(1.1); /* Optional: Zoom effect on hover */
+}
+
+.worker:hover p {
+  opacity: 1;
+}
+
+.contact-section {
+  margin-right: 20px;
+  text-align: right;
+  font-size: 30px;
+  margin-top: 100px;
+  font-weight: bold;
+}
+
+.contact-details {
+  margin-top: 50px;
+}
+
+.working-hours-section {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border: 2px solid #ddd; /* Add a border around the box */
+  border-radius: 10px; /* Rounded corners for the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.working-hours {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Display days and times in two columns */
+  gap: 10px; /* Gap between the day-time pairs */
+}
+
+.day, .time {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd; /* Border for each day-time pair */
+}
+
+.day {
+  font-weight: bold; /* Make the day text bold */
+}
+
+.time {
+  color: #555; /* Dim the time text color for contrast */
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 150px; /* You can adjust this width based on your design */
+  background-color: gray; /* Background color for the dropdown */
+  border: 1px solid #ccc; /* Optional: Add a border for styling */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Optional: Add shadow for depth */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start of the column */
+}
+
+
+
+
+/* Responsive Design for screens up to 768px width */
+/* Responsive Design for screens between 768px and 1200px width */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+
+  /* Adjust container max-width and padding for larger screens */
+  .container {
+    max-width: 90%; /* Adjust based on your design */
+    padding: 0 40px; /* Adjust based on your design */
+  }
+
+  /* Adjust font size for better readability on larger screens */
+  .about-section1, .about-section2 {
+    font-size: 36px;
+  }
+
+  /* Add more styles as needed */
+}
+
+/* Responsive Design for screens larger than 1200px width */
+@media screen and (min-width: 1201px) {
+
+  /* Adjust container max-width for very large screens */
+  .container {
+    max-width: 1200px; /* Adjust based on your design */
+  }
+
+  /* Add more styles as needed */
+}
