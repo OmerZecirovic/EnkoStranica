@@ -7,15 +7,15 @@
 
 /* Body Styles */
 body {
-  font-family: Trebuchet MS, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 
   background-image: url('assets/images/Picture1.png');
-  background-size: 65% 100%;
+  background-size: 50% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: rgb(204, 196, 196);
+  background-color: rgb(155, 154, 94);
 
   display: flex;
   flex-direction: column;
@@ -39,9 +39,13 @@ body {
 }
 
 .logo {
-  font-size: 24px;
-  text-decoration: none;
-  color: #fff;
+  color: darkblue;
+  background: white;
+  width: auto;
+  height: auto;
+  border-radius: 60%;
+  margin-top: -10px;
+  display: inline-block;
 }
 
 .menu-toggle {
@@ -92,10 +96,9 @@ body {
 .about-section1 {
   font-size: 30px;
   text-align: right;
-  margin-top: 60px;
+  margin-top: 5px;
   padding: 20px 0;
   color: black !important;
-  font-weight: bold;
   margin-right: 20px;
 }
 
@@ -300,9 +303,48 @@ body {
 }
 
 
+.why-choose-us-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust as needed */
+}
+
+.why-choose-item {
+  flex: 0 0 calc(33.33% - 20px); /* Adjust as needed for 3 items in a row */
+  padding: 10px;
+  text-align: center;
+}
+
+.why-choose-item img {
+  max-width: 100px; 
+  height: auto;
+  background: white;
+}
+
+.why-choose-us{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.partners-section {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.partners {
+  font-weight: bold;
+}
+
+.conclusion-partners {
+  border: 1px solid #ddd;
+  background-color: #333;
+  color: wheat;
+}
 
 
-/* Responsive Design for screens up to 768px width */
+
 /* Responsive Design for screens between 768px and 1200px width */
 @media screen and (min-width: 769px) and (max-width: 1200px) {
 
