@@ -38,16 +38,6 @@ body {
   padding: 0 20px;
 }
 
-.logo {
-  color: darkblue;
-  background: white;
-  width: auto;
-  height: auto;
-  border-radius: 60%;
-  margin-top: -10px;
-  display: inline-block;
-}
-
 .menu-toggle {
   display: none;
   flex-direction: column;
