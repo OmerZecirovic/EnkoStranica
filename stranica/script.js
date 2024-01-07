@@ -31,3 +31,14 @@ navItems.forEach(item => {
     item.classList.add('active');
   }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownItems = document.querySelectorAll('.dropdown-menu a');
+  
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', function() {
+      document.getElementById('mobile-menu').checked = false;
+    });
+  });
+});

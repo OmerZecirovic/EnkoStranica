@@ -47,7 +47,7 @@ body {
 .bar {
   background-color: #fff;
   height: 3px;
-  width: 25px;
+  width: 20px;
   margin: 3px 0;
 }
 
@@ -162,6 +162,7 @@ body {
   justify-content: bottom;
   align-items: center;
   height: 100px;
+  margin-top: auto;
   background-color: black;
 }
 
@@ -333,32 +334,65 @@ body {
   color: wheat;
 }
 
-
-
-/* Responsive Design for screens between 768px and 1200px width */
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-
-  /* Adjust container max-width and padding for larger screens */
-  .container {
-    max-width: 90%; /* Adjust based on your design */
-    padding: 0 40px; /* Adjust based on your design */
-  }
-
-  /* Adjust font size for better readability on larger screens */
-  .about-section1, .about-section2 {
-    font-size: 36px;
-  }
-
-  /* Add more styles as needed */
+.menu-toggle {
+  /* display: none; */ /* Comment this out or remove it */
+  flex-direction: column;
+  cursor: pointer;
 }
 
-/* Responsive Design for screens larger than 1200px width */
-@media screen and (min-width: 1201px) {
 
-  /* Adjust container max-width for very large screens */
+
+@media screen and (max-width: 599px) {
   .container {
-    max-width: 1200px; /* Adjust based on your design */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
   }
 
-  /* Add more styles as needed */
+  .menu-checkbox:checked ~ .nav-list {
+    max-height: 1000px;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .content1, .about-section1, .about-section2, .contact-section, .partners-section, .why-choose-us {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .worker {
+    margin: 20px;
+  }
+
+  .working-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .day, .time {
+    text-align: left;
+  }
+
+  .dropdown-menu {
+    position: static;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu {
+    max-height: 1000px;
+  }
+}
+
+
+
+@media screen and (min-width: 1201px) {
+  .container {
+    max-width: 1200px;
+  }
 }
