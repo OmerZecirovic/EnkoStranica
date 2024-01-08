@@ -34,11 +34,11 @@ navItems.forEach(item => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const dropdownItems = document.querySelectorAll('.dropdown-menu a');
-  
-  dropdownItems.forEach(item => {
-    item.addEventListener('click', function() {
-      document.getElementById('mobile-menu').checked = false;
-    });
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navList = document.querySelector('.nav-list');
+
+  menuToggle.addEventListener('click', function() {
+      navList.style.display = navList.style.display === 'flex' ? 'none' : 'flex';
   });
 });
+

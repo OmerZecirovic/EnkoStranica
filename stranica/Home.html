@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <nav class="navbar">
     <div class="container">
-      <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Logo"></a>
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="Logo">
+        <span class="company-name">PLATTENLEGER PAŠALIĆ</span>
+      </a>
       <label for="menu-checkbox" class="menu-toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -19,14 +25,16 @@
       </label>
       <ul class="nav-list">
         <li class="nav-item"><a href="Home.html">Über uns</a></li>
+        <li class="nav-item"><a href="#">Unsere Dienstleistungen</a></li>
+        <li class="nav-item"><a href="#">Werkstoffe & Formate</a></li>
+        <li class="nav-item"><a href="#">Kundenstimmen</a></li>
         <li class="nav-item"><a href="AboutUs.html">Unser Team</a></li>
         <li class="nav-item"><a href="ContactUs.html">Kontaktiere uns</a></li>
-        <li class="nav-item dropdown"> <!-- Notice the class 'dropdown' here -->
+       <!-- <li class="nav-item dropdown"> 
           <a href="#" class="dropdown-toggle">Kategorien</a>
           <div class="dropdown-menu">
             <a href="category1.html">Category 1</a>
-            <a href="category2.html">Category 2</a>
-            <!-- Add more categories as needed -->
+            <a href="category2.html">Category 2</a> -->
           </div>
         </li>
       </ul>
@@ -48,8 +56,8 @@
           Ausdruck von Herzblut und Leidenschaft. <br>
           <br>
         </p>
-        <video width="99%" controls autoplay>
-          <source src="test.mp4" type="video/mp4">
+        <video style="border-radius: 15px;" width="50%" controls autoplay>
+          <source  src="test.mp4" type="video/mp4">
           Your browser does not support the video tag.
       </video>
       <!-- <button class="button1" onclick="openPresentation()">See Our Works</button> -->

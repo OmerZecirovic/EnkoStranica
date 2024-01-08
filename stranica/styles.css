@@ -7,16 +7,16 @@
 
 /* Body Styles */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Kanit', sans-serif;
   margin: 0;
   padding: 0;
 
-  background-image: url('assets/images/Picture1.png');
-  background-size: 50% 100%;
+  background-image: url('assets/images/bg1.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: rgb(155, 154, 94);
-
+  
+  color: white;
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Minimum height of the viewport height */
@@ -24,10 +24,54 @@ body {
 
 /* Navigation Styles */
 .navbar {
-  background-color: #333;
+  background-color: #060a05;
   color: #fff;
-  padding: 10px 0;
+  padding: 20px 0;
 }
+
+.logo {
+  left: -150px;
+  margin-top: -40px;
+  display: inline-block;
+  position: relative;
+  perspective: 1000px; /* Perspective for 3D effect */
+  transition: perspective 0.5s, transform 0.5s; /* Transition for smooth animation */
+}
+
+.logo:hover {
+  perspective: 1000px;
+}
+
+.logo img, .company-name {
+  backface-visibility: hidden; /* Hide the backface for a clean flip effect */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo img {
+  z-index: 1; /* Ensure the logo image is on top */
+  transform: rotateY(0deg); /* Start position */
+  transition: transform 0.5s;
+}
+
+.company-name {
+  z-index: 0; /* Ensure the company name is behind the logo */
+  transform: rotateY(180deg); /* Flipped position */
+  opacity: 0; /* Initially hidden */
+  transition: transform 0.5s, opacity 0.5s;
+  color: #ddd;
+}
+
+.logo:hover img {
+  transform: rotateY(-180deg); /* Flip the logo on hover */
+}
+
+.logo:hover .company-name {
+  transform: rotateY(0deg); /* Show the company name on hover */
+  opacity: 1; /* Make it visible */
+}
+
 
 .container {
   display: flex;
@@ -38,26 +82,33 @@ body {
   padding: 0 20px;
 }
 
+
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensures it's above other elements */
 }
 
 .bar {
-  background-color: #fff;
+  width: 25px;
   height: 3px;
-  width: 20px;
+  background-color: #fff;
   margin: 3px 0;
+  transition: 0.3s; /* Smooth animation */
 }
 
 .nav-list {
+  justify-content: space-between;
   list-style-type: none;
   display: flex;
 }
 
 .nav-item {
-  margin-right: 20px;
+  margin-right: 65px;
 }
 
 .nav-item:last-child {
@@ -67,6 +118,7 @@ body {
 .nav-item a {
   text-decoration: none;
   color: #fff;
+  background: blue;
   padding: 5px 10px;
   border-radius: 5px;
   transition: background-color 0.3s;
@@ -77,18 +129,19 @@ body {
 }
 
 .content1 {
-  text-align: right;
+  text-align: center;
   margin: 20px;
-  font-size: 25px;
+  font-size: 30px;
+
 }
 
 /* About Section Styles */
 .about-section1 {
   font-size: 30px;
-  text-align: right;
+  text-align: center;
   margin-top: 5px;
   padding: 20px 0;
-  color: black !important;
+  color: white !important;
   margin-right: 20px;
 }
 
@@ -104,6 +157,7 @@ body {
   align-items: center;
   height: 80px;
   background-color: #000;
+  color: #000;
   margin-top: 100px;
 }
 
@@ -135,6 +189,7 @@ body {
   height: 80px;
   background-color: #000;
   margin-top: 100px;
+  color: #000;
 }
 
 .social-media-links {
@@ -164,12 +219,16 @@ body {
   height: 100px;
   margin-top: auto;
   background-color: black;
+  color: #000;
+  
 }
 
 .social-media-links {
   display: flex;
   gap: 20px;
+  
 }
+
 
 .social-media-links a {
   color: #fff;
@@ -192,7 +251,7 @@ body {
   font-size: 30px;
   margin-top: 30px;
   padding: 20px;
-  color: black !important;
+  color: white !important;
   font-weight: bold;
   margin-right: 20px;
 }
@@ -200,17 +259,17 @@ body {
 /* Workers Section Styles */
 .workers {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  padding: 25px 0px;
 }
 
 .worker {
-  text-align: center;
+  text-align: left !important;
   margin: 40px;
   margin-top: -20px;
-  width: 100px; /* Fixed width for all workers */
-  height: 100px; /* Fixed height for all workers */
+  width: 120px; /* Fixed width for all workers */
+  height: 120px; /* Fixed height for all workers */
 }
 
 .worker img {
@@ -237,10 +296,10 @@ body {
 
 .contact-section {
   margin-right: 20px;
-  text-align: right;
+  text-align: center;
   font-size: 30px;
   margin-top: 100px;
-  font-weight: bold;
+  
 }
 
 .contact-details {
@@ -269,7 +328,8 @@ body {
 }
 
 .day {
-  font-weight: bold; /* Make the day text bold */
+  font-weight: bold;
+  color: #000; /* Make the day text bold */
 }
 
 .time {
@@ -328,17 +388,6 @@ body {
   font-weight: bold;
 }
 
-.conclusion-partners {
-  border: 1px solid #ddd;
-  background-color: #333;
-  color: wheat;
-}
-
-.menu-toggle {
-  /* display: none; */ /* Comment this out or remove it */
-  flex-direction: column;
-  cursor: pointer;
-}
 
 
 
@@ -350,13 +399,33 @@ body {
     padding: 0 10px;
   }
 
-  .menu-checkbox:checked ~ .nav-list {
-    max-height: 1000px;
-  }
-
   .nav-item {
     margin: 10px 0;
   }
+
+  .nav-list {
+    display: none; /* Hide the nav list by default */
+    flex-direction: column; /* Stack nav items vertically */
+    width: 100%; /* Take full width */
+    text-align: center; /* Center-align items */
+    position: absolute;
+    top: 60px; /* Adjust this based on your navbar height */
+    left: 0;
+    background-color: #060a05; /* Match your navbar background */
+    z-index: 999; /* Ensure it's above other content */
+}
+
+.menu-toggle {
+  display: flex;
+}
+
+.menu-checkbox:checked ~ .nav-list {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Take full viewport height */
+}
 
   .content1, .about-section1, .about-section2, .contact-section, .partners-section, .why-choose-us {
     text-align: center;
